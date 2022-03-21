@@ -1,0 +1,9 @@
+certifi==2021.5.30
+click 
+Flask 
+importlib-metadata 
+itsdangerous 
+Jinja2 
+Werkzeug 
+wincertstore==0.2
+zipp 
