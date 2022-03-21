@@ -15,9 +15,7 @@ def home_page():
 
 @app.route("/data", methods=['GET', 'POST'])
 def data():
-     directory_path = request.json['path']
-     raw_data = pd.read_csv(directory_path +"\\"+"Dataset.csv")
-     return jsonify(raw_data)
+     return jsonify("This is second method")
         
 
 @app.route('/Preprocessing' , methods = ['POST'])
