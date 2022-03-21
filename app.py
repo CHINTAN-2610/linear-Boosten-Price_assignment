@@ -13,6 +13,13 @@ app = Flask(__name__)
 def home_page():
     return jsonify('testing api')
 
+@app.route("/data", methods=['GET', 'POST'])
+def data():
+     directory_path = request.json['path']
+     raw_data = pd.read_csv("Dataset.csv")
+     return jsonify(raw_data)
+        
+
 @app.route('/Preprocessing' , methods = ['POST'])
 def PreprocessingData():
        directory_path = request.json['path']
